@@ -1,0 +1,11 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet"
+  },
+ 
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=DEVELOPMENT-DES\\MSSQLSERVER2017;Initial Catalog=AccountManagement;Integrated Security=False;User Id=sa;Password=password;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+  }
+}
