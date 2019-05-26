@@ -21,20 +21,6 @@ namespace Registration.Issue.Function.Extensions
 				.Build();
 		}
 
-		public static AuthenticationBuilder AddNewKensAuthentication(this IServiceCollection services, IConfiguration configuration)
-			=> services
-				.AddAuthentication(options =>
-				{
-					options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-					options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-				})
-				.AddJwtBearer(options =>
-				{
-					var tokenProviderOptions = new TokenProviderOptions();
-					configuration.GetSection("TokenProviderOptions").Bind(tokenProviderOptions);
-					options.TokenValidationParameters = tokenProviderOptions.TokenValidationParameters;
-				});
-
 		public static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration configuration)
 			=> services.AddDbContext<AccountManagementDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 	}

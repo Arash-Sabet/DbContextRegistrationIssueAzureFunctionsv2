@@ -13,8 +13,7 @@ namespace NewKens.Cognitive.Serverless.CandidateManagement.Function
 
 			builder
 				.Services
-				.AddDatabase(configuration)
-				.AddNewKensAuthentication(configuration);
+				.AddDatabase(configuration);
 		}
 	}
 }
