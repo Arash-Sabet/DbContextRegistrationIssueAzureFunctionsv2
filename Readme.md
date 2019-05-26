@@ -14,7 +14,7 @@ Simply run the project in Visual Studio 2019 on azure storage emulator.
 
 ## Possible root cause
 
-Adding ```AddDbContext``` to the service collection may or might be contributing in this issue. FOr e.g. if this line of code ```.AddDatabase(configuration)``` is commented out from ```Configure``` method below,
+Adding ```AddDbContext``` to the service collection may or might be contributing in this issue. For e.g. if this line of code ```.AddDatabase(configuration)``` is commented out from ```Configure``` method below,
 and the project is run again, the quoted problem above will disappear.
 
 ```csharp
